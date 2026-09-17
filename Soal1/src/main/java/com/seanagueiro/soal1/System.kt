@@ -151,14 +151,12 @@ class System {
                 if (price == null || price <= 0) {
                     println("ERROR: Price must be greater than 0.")
                 } else {
-                    // Mengubah properti price langsung
                     food.price = price
                     break
                 }
         }
         println("Menu updated!")
     }
-
     private fun deleteMenu() {
         println()
         println("========== DELETE MENU ==========")
@@ -186,7 +184,6 @@ class System {
                 println("ERROR: Please enter Y or N.")
             }
     }
-
     private fun makeOrder() {
         println()
         println("========== MAKE ORDER ==========")
@@ -244,7 +241,6 @@ class System {
 
         order.displayOrder()
     }
-
     private fun viewOrders() {
         println()
         println("=========== ALL ORDERS ===========")
@@ -261,14 +257,12 @@ class System {
                 order.displayOrder()
             }
     }
-
     private fun findFood(id: Int): Food? {
         // Mengakses it.id langsung
         return menu.find {
             it.id == id
         }
     }
-
     private fun readInt(message: String): Int {
         while (true) {
             print(message)
@@ -280,7 +274,6 @@ class System {
             }
         }
     }
-
     private fun readPositiveInt(message: String): Int {
         while (true) {
             val number = readInt(message)
@@ -290,7 +283,6 @@ class System {
             println("ERROR: Number must be greater than 0.")
         }
     }
-
     private fun readPositiveDouble(message: String): Double {
         while (true) {
             print(message)
@@ -306,7 +298,6 @@ class System {
             }
         }
     }
-
     private fun readNonEmptyString(message: String): String {
         while (true) {
             print(message)
